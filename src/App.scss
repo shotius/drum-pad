@@ -1,0 +1,86 @@
+$padHeight: 100px;
+$padWidth: 100px;
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#drum-machine {
+  display: flex;
+  width: 500px;
+  background-color: black;
+  .drum-pad {
+    width: $padWidth;
+    height: $padHeight;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    font-weight: 600;
+  }
+  #keyboard {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 4px;
+    padding: 4px;
+  }
+ 
+  #display {
+    margin: 12px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px; 
+    height: 30px; 
+    background: #DED4C2;
+    text-transform: uppercase;
+    padding: 4px;
+    font-weight: 600;
+  }
+  
+  #power {
+    margin-top: 40px;
+    p {
+      margin-bottom: 3px;
+      color: white;
+      text-align: center;
+      font-weight: 400;
+   }
+   .select {
+    @extend .outer-select;
+    .inner {
+      @extend .inner-select;
+      }
+    }
+  }
+  
+  
+}
+
+h2 {
+  padding-bottom: 20px;
+}
+
+.outer-select {
+  background-color: #515653;
+  width: 30px;
+  height: 20px;
+  margin: 0 auto;   
+}
+
+.inner-select {
+  width: 15px;
+      height: 18px;
+      background-color: white;
+      border: 1px solid gray;
+      
+}
